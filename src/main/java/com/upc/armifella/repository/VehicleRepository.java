@@ -6,11 +6,9 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.upc.armifella.entity.User;
+import com.upc.armifella.entity.Vehicle;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
 
-	@Query("SELECT u FROM User u WHERE u.username = :username and u.password= :password")
-	public User login(@Param("username")String username, @Param("password")String password);
-	
 }

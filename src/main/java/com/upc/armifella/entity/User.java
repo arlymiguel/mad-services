@@ -1,7 +1,5 @@
 package com.upc.armifella.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,9 +21,6 @@ public class User {
 
 	@NotBlank
 	private String password;
-
-	@NotBlank
-	private String email;
 
 	@NotBlank
 	private String state;
@@ -52,14 +47,6 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public String getState() {
