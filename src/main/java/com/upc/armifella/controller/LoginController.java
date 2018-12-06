@@ -16,17 +16,15 @@ public class LoginController {
 
 	@Autowired
 	private UserService userService;
-	
+
 	@GetMapping("/authenticate")
 	public boolean login() {
 		return true;
 	}
-	
-	
+
 	@GetMapping("/user")
 	public List<User> getUsers() {
 		return userService.getAllUser();
 	}
-	
-	
+
 }
