@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "t_user")
@@ -16,13 +15,10 @@ public class User {
 	@SequenceGenerator(name = "user_generator", sequenceName = "user_sequence", initialValue = 1)
 	private Long id;
 
-	@NotBlank
 	private String username;
 
-	@NotBlank
 	private String password;
 
-	@NotBlank
 	private String state;
 
 	public Long getId() {

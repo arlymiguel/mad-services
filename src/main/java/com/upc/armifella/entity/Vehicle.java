@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "t_vehicle")
@@ -16,25 +15,18 @@ public class Vehicle {
 	@SequenceGenerator(name = "vehicle_generator", sequenceName = "vehicle_sequence", initialValue = 1)
 	private Long id;
 
-	@NotBlank
 	private String plate;
 
-	@NotBlank
 	private String brand;
 
-	@NotBlank
 	private String model;
 
-	@NotBlank
 	private String year;
 
-	@NotBlank
 	private Long latitude;
 
-	@NotBlank
 	private String longitude;
 
-	@NotBlank
 	private String state;
 
 	public Long getId() {

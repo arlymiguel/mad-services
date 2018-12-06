@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "t_driver")
@@ -16,22 +15,16 @@ public class Driver {
 	@SequenceGenerator(name = "driver_generator", sequenceName = "driver_sequence", initialValue = 1)
 	private Long id;
 
-	@NotBlank
 	private String name;
 
-	@NotBlank
 	private String lastname;
 
-	@NotBlank
 	private String email;
 
-	@NotBlank
 	private String phonenumber;
 
-	@NotBlank
 	private String role;
 
-	@NotBlank
 	private String state;
 
 	public Long getId() {
